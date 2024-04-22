@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres
+    command: -c config_file=/etc/postgresql.conf # use this config file instead of the default one
+    volumes:
+      - ./postgres/configs/custom_postgresql.conf:/etc/postgresql.conf
+      - ./postgres/postgressData:/var/lib/postgresql/data
+      # - ./log:/var/lib/postgresql/data/log
+      - ./postgres/configs/seed.sql:/docker-entrypoint-initdb.d/seed.sql # scripts in this folder will be execute the first time this container is up and running
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  web-db:
+    build: ./postgres/.
+    command: flask run --debug
+    volumes:
+      - ./postgres:/code
+    ports:
+      - "8000:5000"
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST=db
+    depends_on:
+      - db
