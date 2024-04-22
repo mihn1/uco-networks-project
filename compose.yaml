@@ -11,6 +11,8 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    networks:
+      - private_net
   web-db:
     build: ./postgres/.
     command: flask run --debug
@@ -23,5 +25,10 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST=db
+    networks:
+      - private_net
     depends_on:
       - db
+
+networks:
+  private_net:
