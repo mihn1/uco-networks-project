@@ -12,7 +12,9 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     networks:
-      - private_net
+      private_net:
+        ipv4_address: 172.16.0.3
+
   web-db:
     build: ./postgres/.
     command: flask run --debug
@@ -26,9 +28,15 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST=db
     networks:
-      - private_net
+      private_net:
+        ipv4_address: 172.16.0.69
     depends_on:
       - db
 
 networks:
   private_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.0.0/23
+          gateway: 172.16.0.1
