@@ -5,6 +5,6 @@ services:
     ports:
       - "67:67/udp"
     volumes:
-      - ./dhcp/dhcp.conf:/etc/dhcp/dhcpd.conf
+      - ./dhcp/dhcpd.conf:/etc/dhcp/dhcpd.conf
 
     network_mode: "host"

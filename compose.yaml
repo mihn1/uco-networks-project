@@ -5,14 +5,13 @@ services:
     volumes:
       - ./postgres/configs/custom_postgresql.conf:/etc/postgresql.conf
       - ./postgres/postgressData:/var/lib/postgresql/data
-      # - ./log:/var/lib/postgresql/data/log
       - ./postgres/configs/seed.sql:/docker-entrypoint-initdb.d/seed.sql # scripts in this folder will be execute the first time this container is up and running
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     networks:
-      private_net:
+      main_net:
         ipv4_address: 172.16.0.3
 
   web-db:
@@ -28,15 +27,37 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST=db
     networks:
-      private_net:
+      main_net:
         ipv4_address: 172.16.0.69
     depends_on:
       - db
+  
+  # DHCP Server
+  dhcp: 
+    build: ./dhcp/.
+    networks:
+      main_net:
+        ipv4_address: 172.16.0.2
+
+  # A dummy container for testing DHCP server
+  dhcp-client:
+    image: alpine:latest
+    command: sh -c "apk update && apk add --no-cache net-tools dhclient && tail -f /dev/null"
+    stdin_open: true
+    tty: true
+    cap_add:
+      - "NET_ADMIN"
+    networks:
+      main_net:
+    depends_on: 
+      - dhcp
 
 networks:
-  private_net:
+  main_net:
     driver: bridge
     ipam:
       config:
         - subnet: 172.16.0.0/23
           gateway: 172.16.0.1
+  dmz_net:
+    driver: bridge
