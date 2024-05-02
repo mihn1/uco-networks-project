@@ -13,7 +13,8 @@ services:
     networks:
       main_net:
         ipv4_address: 172.16.0.3
-
+        
+  # A dummy web app to generate traffics for the db
   web-db:
     build: ./postgres/.
     command: flask run --debug
@@ -31,6 +32,25 @@ services:
         ipv4_address: 172.16.0.69
     depends_on:
       - db
+  
+  # web server
+  apache-service:
+    # container_name: cmsc5063-website
+    image: httpd:2.4
+    ports:
+      - "8080:80"      
+    volumes:
+      - ./webserver/public-html:/usr/local/apache2/htdocs/
+      - ./webserver/httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    restart: always
+    cpus: 0.5 
+    mem_limit: 50m
+    environment:
+      - APACHE_RUN_USER=www-data 
+      - APACHE_RUN_GROUP=www-data 
+    networks:
+      public_network:
+        ipv4_address: 172.16.2.2  
   
   # DHCP Server
   dhcp: 
@@ -59,5 +79,9 @@ networks:
       config:
         - subnet: 172.16.0.0/23
           gateway: 172.16.0.1
-  dmz_net:
+  public_network:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.2.0/29
+          gateway: 172.16.2.1
