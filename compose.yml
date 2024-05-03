@@ -90,7 +90,7 @@ services:
     tty: true
     dns:
       - 172.16.2.3
-      - 8.8.8.8 # Google'DNS - For downloading stuff
+      - 8.8.8.8 # Google's DNS - For downloading stuff
     cap_add:
       - "NET_ADMIN"
     networks:
