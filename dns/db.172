@@ -2,12 +2,12 @@
 ; BIND reverse data file for 0.2.16.172.in-addr.arpa
 ;
 $TTL	604800
-@	IN	SOA	ns.helloworldenterprises.com. root.helloworldenterprises.com. (
+@	IN	SOA	ns.nexustechnologies.com. root.nexustechnologies.com. (
 			      1		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-@	IN	NS	ns.helloworldenterprises.com.
-2	IN	PTR	ns.helloworldenterprises.com.
+@	IN	NS	ns.nexustechnologies.com.
+2	IN	PTR	ns.nexustechnologies.com.

@@ -2,7 +2,7 @@
 ; BIND data file for website
 ;
 $TTL	604800
-@	IN	SOA	helloworldenterprises.com. root.helloworldenterprises.com. (
+@	IN	SOA	nexustechnologies.com. root.nexustechnologies.com. (
 			      2		; Serial
 			 604800		; Refresh
 			  86400		; Retry

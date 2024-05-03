@@ -76,7 +76,7 @@ services:
     image: ubuntu/bind9:latest
     volumes:
       - ./dns/db.172:/etc/bind/db.172
-      - ./dns/db.helloworldenterprises.com:/etc/bind/db.helloworldenterprises.com
+      - ./dns/db.nexustechnologies.com:/etc/bind/db.nexustechnologies.com
       - ./dns/named.conf.local:/etc/bind/named.conf.local
     networks:
       public_network:
