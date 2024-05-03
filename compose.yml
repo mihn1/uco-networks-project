@@ -72,6 +72,29 @@ services:
     depends_on: 
       - dhcp
 
+  dns:
+    image: ubuntu/bind9:latest
+    volumes:
+      - ./dns/db.172:/etc/bind/db.172
+      - ./dns/db.helloworldenterprises.com:/etc/bind/db.helloworldenterprises.com
+      - ./dns/named.conf.local:/etc/bind/named.conf.local
+    networks:
+      public_network:
+        ipv4_address: 172.16.2.3
+
+  # A dummy container for testing the dns server
+  dns-client:
+    image: alpine:latest
+    command: sh -c "apk update && apk add bind-tools && apk add c-ares && apk add curl && tail -f /dev/null"
+    stdin_open: true
+    tty: true
+    cap_add:
+      - "NET_ADMIN"
+    networks:
+      public_network:
+    depends_on: 
+      - dns
+
 networks:
   main_net:
     driver: bridge
@@ -81,6 +104,7 @@ networks:
           gateway: 172.16.0.1
   public_network:
     driver: bridge
+    #external: true #we would use this in a real life situation
     ipam:
       config:
         - subnet: 172.16.2.0/29
