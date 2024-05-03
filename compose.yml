@@ -88,6 +88,9 @@ services:
     command: sh -c "apk update && apk add bind-tools && apk add c-ares && apk add curl && tail -f /dev/null"
     stdin_open: true
     tty: true
+    dns:
+      - 172.16.2.3
+      - 8.8.8.8 # Google'DNS - For downloading stuff
     cap_add:
       - "NET_ADMIN"
     networks:
