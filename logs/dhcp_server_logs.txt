@@ -1,0 +1,24 @@
+2024-05-02 01:26:28 Internet Systems Consortium DHCP Server 4.4.3-P1
+2024-05-02 01:26:28 Copyright 2004-2022 Internet Systems Consortium.
+2024-05-02 01:26:28 All rights reserved.
+2024-05-02 01:26:28 For info, please visit https://www.isc.org/software/dhcp/
+2024-05-02 01:26:28 Config file: /etc/dhcp/dhcpd.conf
+2024-05-02 01:26:28 Database file: /var/lib/dhcp/dhcpd.leases
+2024-05-02 01:26:28 PID file: /var/run/dhcpd.pid
+2024-05-02 01:26:28 Wrote 0 leases to leases file.
+2024-05-02 01:26:28 Listening on LPF/eth0/02:42:ac:10:00:02/172.16.0.0/23
+2024-05-02 01:26:28 Sending on   LPF/eth0/02:42:ac:10:00:02/172.16.0.0/23
+2024-05-02 01:26:28 Sending on   Socket/fallback/fallback-net
+2024-05-02 01:26:28 Server starting service.
+2024-05-04 13:01:23 Internet Systems Consortium DHCP Server 4.4.3-P1
+2024-05-04 13:01:23 Copyright 2004-2022 Internet Systems Consortium.
+2024-05-04 13:01:23 All rights reserved.
+2024-05-04 13:01:23 For info, please visit https://www.isc.org/software/dhcp/
+2024-05-04 13:01:24 Config file: /etc/dhcp/dhcpd.conf
+2024-05-04 13:01:24 Database file: /var/lib/dhcp/dhcpd.leases
+2024-05-04 13:01:24 PID file: /var/run/dhcpd.pid
+2024-05-04 13:01:25 Wrote 0 leases to leases file.
+2024-05-04 13:01:25 Listening on LPF/eth0/02:42:ac:10:00:02/172.16.0.0/23
+2024-05-04 13:01:25 Sending on   LPF/eth0/02:42:ac:10:00:02/172.16.0.0/23
+2024-05-04 13:01:25 Sending on   Socket/fallback/fallback-net
+2024-05-04 13:01:25 Server starting service.
