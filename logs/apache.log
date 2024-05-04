@@ -1,0 +1,104 @@
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:15 +0000] "GET / HTTP/1.1" 200 43373
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/js/theme-change.js HTTP/1.1" 200 692
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/css/fontawesome-all.min.css HTTP/1.1" 200 59344
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/js/jquery-3.3.1.min.js HTTP/1.1" 200 69917
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/js/owl.carousel.js HTTP/1.1" 200 90057
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/css/style-starter.css HTTP/1.1" 200 233928
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 58072
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/blog3.jpg HTTP/1.1" 200 40059
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/blog1.jpg HTTP/1.1" 200 58369
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/blog2.jpg HTTP/1.1" 200 52476
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/testf1.png HTTP/1.1" 200 220788
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/bann1.png HTTP/1.1" 200 25373
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/testm2.png HTTP/1.1" 200 123779
+2024-04-30 22:33:45 AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.16.2.2. Set the 'ServerName' directive globally to suppress this message
+2024-04-30 22:33:45 AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.16.2.2. Set the 'ServerName' directive globally to suppress this message
+2024-04-30 22:33:45 [Wed May 01 03:33:45.599298 2024] [mpm_event:notice] [pid 1:tid 139725505783680] AH00489: Apache/2.4.59 (Unix) configured -- resuming normal operations
+2024-04-30 22:33:45 [Wed May 01 03:33:45.602648 2024] [core:notice] [pid 1:tid 139725505783680] AH00094: Command line: 'httpd -D FOREGROUND'
+2024-04-30 22:34:16 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/testf2.png HTTP/1.1" 200 185613
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/banner.png HTTP/1.1" 200 16462
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/home-ab.png HTTP/1.1" 200 38046
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/team1.svg HTTP/1.1" 200 3419
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 80252
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/team2.svg HTTP/1.1" 200 3165
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/team3.svg HTTP/1.1" 200 3419
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/images/testm1.png HTTP/1.1" 200 93772
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/team4.svg HTTP/1.1" 200 7282
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:16 +0000] "GET /assets/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 78472
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/mobile.png HTTP/1.1" 200 28437
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/bg2.png HTTP/1.1" 200 19605
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/home1.jpg HTTP/1.1" 200 68077
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/team5.svg HTTP/1.1" 200 3165
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/bg1.png HTTP/1.1" 200 12922
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/testm3.png HTTP/1.1" 200 106914
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /assets/images/testf3.png HTTP/1.1" 200 216360
+2024-04-30 22:34:17 172.16.2.1 - - [01/May/2024:03:34:17 +0000] "GET /favicon.ico HTTP/1.1" 404 -
+2024-04-30 22:34:29 172.16.2.1 - - [01/May/2024:03:34:29 +0000] "GET /assets/images/bg2-dark.png HTTP/1.1" 200 20625
+2024-04-30 22:34:48 172.16.2.1 - - [01/May/2024:03:34:48 +0000] "GET /thanks.html?email=dilish%40dilish.com HTTP/1.1" 200 12274
+2024-04-30 22:34:51 172.16.2.1 - - [01/May/2024:03:34:51 +0000] "GET /index.html HTTP/1.1" 200 43373
+2024-04-30 22:34:51 172.16.2.1 - - [01/May/2024:03:34:51 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-04-30 22:34:51 172.16.2.1 - - [01/May/2024:03:34:51 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-04-30 22:35:14 172.16.2.1 - - [01/May/2024:03:35:14 +0000] "GET /contact.html HTTP/1.1" 200 16628
+2024-04-30 22:35:28 172.16.2.1 - - [01/May/2024:03:35:28 +0000] "GET /thanks.html?name=Dilish&email=d%40d.com&message=Hi+there HTTP/1.1" 200 12274
+2024-04-30 22:35:47 172.16.2.1 - - [01/May/2024:03:35:47 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-04-30 22:35:47 172.16.2.1 - - [01/May/2024:03:35:47 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:29:55 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET / HTTP/1.1" 200 43373
+2024-05-04 14:29:55 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-04-30 23:25:07 [Wed May 01 04:25:07.934901 2024] [mpm_event:notice] [pid 1:tid 139725505783680] AH00492: caught SIGWINCH, shutting down gracefully
+2024-05-04 14:29:20 AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.16.2.2. Set the 'ServerName' directive globally to suppress this message
+2024-05-04 14:29:20 AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.16.2.2. Set the 'ServerName' directive globally to suppress this message
+2024-05-04 14:29:20 [Sat May 04 19:29:20.382987 2024] [mpm_event:notice] [pid 1:tid 139813539235712] AH00489: Apache/2.4.59 (Unix) configured -- resuming normal operations
+2024-05-04 14:29:20 [Sat May 04 19:29:20.723815 2024] [core:notice] [pid 1:tid 139813539235712] AH00094: Command line: 'httpd -D FOREGROUND'
+2024-05-04 14:29:55 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/js/theme-change.js HTTP/1.1" 200 692
+2024-05-04 14:29:55 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/css/fontawesome-all.min.css HTTP/1.1" 200 59344
+2024-05-04 14:29:55 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/css/style-starter.css HTTP/1.1" 200 233928
+2024-05-04 14:29:55 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/js/jquery-3.3.1.min.js HTTP/1.1" 200 69917
+2024-05-04 14:29:55 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 58072
+2024-05-04 14:29:55 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/js/owl.carousel.js HTTP/1.1" 200 90057
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/images/bann1.png HTTP/1.1" 200 25373
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/images/testm3.png HTTP/1.1" 200 106914
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/images/testm2.png HTTP/1.1" 200 123779
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/images/testf2.png HTTP/1.1" 200 185613
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/images/testm1.png HTTP/1.1" 200 93772
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/home-ab.png HTTP/1.1" 200 38046
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:55 +0000] "GET /assets/images/testf3.png HTTP/1.1" 200 216360
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 78472
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 80252
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/banner.png HTTP/1.1" 200 16462
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/team1.svg HTTP/1.1" 200 3419
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/team2.svg HTTP/1.1" 200 3165
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/team3.svg HTTP/1.1" 200 3419
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/team5.svg HTTP/1.1" 200 3165
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/blog1.jpg HTTP/1.1" 200 58369
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/team4.svg HTTP/1.1" 200 7282
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/home1.jpg HTTP/1.1" 200 68077
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/blog2.jpg HTTP/1.1" 200 52476
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/mobile.png HTTP/1.1" 200 28437
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/bg2.png HTTP/1.1" 200 19605
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/bg1.png HTTP/1.1" 200 12922
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/blog3.jpg HTTP/1.1" 200 40059
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /assets/images/testf1.png HTTP/1.1" 200 220788
+2024-05-04 14:29:56 172.16.2.1 - - [04/May/2024:19:29:56 +0000] "GET /favicon.ico HTTP/1.1" 404 -
+2024-05-04 14:29:57 172.16.2.1 - - [04/May/2024:19:29:57 +0000] "GET /about.html HTTP/1.1" 200 36457
+2024-05-04 14:29:57 172.16.2.1 - - [04/May/2024:19:29:57 +0000] "GET /assets/images/about.png HTTP/1.1" 200 17344
+2024-05-04 14:29:57 172.16.2.1 - - [04/May/2024:19:29:57 +0000] "GET /assets/images/image.jpg HTTP/1.1" 200 169605
+2024-05-04 14:29:57 172.16.2.1 - - [04/May/2024:19:29:57 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:29:57 172.16.2.1 - - [04/May/2024:19:29:57 +0000] "GET /assets/js/counter.js HTTP/1.1" 200 3089
+2024-05-04 14:29:57 172.16.2.1 - - [04/May/2024:19:29:57 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:29:58 172.16.2.1 - - [04/May/2024:19:29:58 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:29:58 172.16.2.1 - - [04/May/2024:19:29:58 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:29:59 172.16.2.1 - - [04/May/2024:19:29:59 +0000] "GET /services.html HTTP/1.1" 200 24904
+2024-05-04 14:29:59 172.16.2.1 - - [04/May/2024:19:29:59 +0000] "GET /assets/images/service1.png HTTP/1.1" 200 20282
+2024-05-04 14:29:59 172.16.2.1 - - [04/May/2024:19:29:59 +0000] "GET /assets/images/service2.png HTTP/1.1" 200 19472
+2024-05-04 14:30:00 172.16.2.1 - - [04/May/2024:19:30:00 +0000] "GET /contact.html HTTP/1.1" 200 16628
+2024-05-04 14:30:01 172.16.2.1 - - [04/May/2024:19:30:01 +0000] "GET /index.html HTTP/1.1" 200 43373
+2024-05-04 14:30:01 172.16.2.1 - - [04/May/2024:19:30:01 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:30:01 172.16.2.1 - - [04/May/2024:19:30:01 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:30:02 172.16.2.1 - - [04/May/2024:19:30:02 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:30:02 172.16.2.1 - - [04/May/2024:19:30:02 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:30:06 172.16.2.1 - - [04/May/2024:19:30:06 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:30:06 172.16.2.1 - - [04/May/2024:19:30:06 +0000] "GET /assets/js/jquery.magnific-popup.min.js HTTP/1.1" 404 -
+2024-05-04 14:30:06 172.16.2.1 - - [04/May/2024:19:30:06 +0000] "GET /assets/images/bg2-dark.png HTTP/1.1" 200 20625
