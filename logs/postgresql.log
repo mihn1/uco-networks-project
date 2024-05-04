@@ -1,0 +1,26 @@
+2024-05-04 20:25:14.979 UTC [1] LOG:  starting PostgreSQL 16.2 (Debian 16.2-1.pgdg120+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-05-04 20:25:14.979 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-05-04 20:25:14.979 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2024-05-04 20:25:14.995 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-05-04 20:25:15.027 UTC [30] LOG:  database system was shut down at 2024-05-04 20:21:58 UTC
+2024-05-04 20:25:15.071 UTC [1] LOG:  database system is ready to accept connections
+2024-05-04 20:25:58.027 UTC [35] LOG:  connection received: host=172.16.0.69 port=34356
+2024-05-04 20:25:58.038 UTC [35] LOG:  connection authenticated: identity="postgres" method=scram-sha-256 (/var/lib/postgresql/data/pg_hba.conf:128)
+2024-05-04 20:25:58.038 UTC [35] LOG:  connection authorized: user=postgres database=postgres
+2024-05-04 20:25:58.095 UTC [35] LOG:  statement: BEGIN
+2024-05-04 20:25:58.095 UTC [35] LOG:  statement: SELECT * FROM my_user;
+2024-05-04 20:26:27.853 UTC [37] LOG:  connection received: host=172.16.0.69 port=49522
+2024-05-04 20:26:27.861 UTC [37] LOG:  connection authenticated: identity="postgres" method=scram-sha-256 (/var/lib/postgresql/data/pg_hba.conf:128)
+2024-05-04 20:26:27.861 UTC [37] LOG:  connection authorized: user=postgres database=postgres
+2024-05-04 20:26:27.880 UTC [37] LOG:  statement: BEGIN
+2024-05-04 20:26:27.880 UTC [37] LOG:  statement: SELECT * FROM my_user;
+2024-05-04 20:26:31.180 UTC [38] LOG:  connection received: host=172.16.0.69 port=49538
+2024-05-04 20:26:31.188 UTC [38] LOG:  connection authenticated: identity="postgres" method=scram-sha-256 (/var/lib/postgresql/data/pg_hba.conf:128)
+2024-05-04 20:26:31.188 UTC [38] LOG:  connection authorized: user=postgres database=postgres
+2024-05-04 20:26:31.207 UTC [38] LOG:  statement: BEGIN
+2024-05-04 20:26:31.207 UTC [38] LOG:  statement: SELECT * FROM my_user;
+2024-05-04 20:27:05.478 UTC [49] LOG:  connection received: host=[local]
+2024-05-04 20:27:05.484 UTC [49] LOG:  connection authorized: user=postgres database=postgres application_name=psql
+2024-05-04 20:27:14.724 UTC [49] LOG:  statement: select * from my_user;
+2024-05-04 20:30:15.048 UTC [28] LOG:  checkpoint starting: time
+2024-05-04 20:30:15.140 UTC [28] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.019 s, sync=0.011 s, total=0.093 s; sync files=2, longest=0.007 s, average=0.006 s; distance=0 kB, estimate=0 kB; lsn=0/1553630, redo lsn=0/15535F8
