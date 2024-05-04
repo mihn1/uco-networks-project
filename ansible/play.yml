@@ -1,0 +1,57 @@
+---
+- name: Deploy Docker Compose
+  hosts: ubuntu
+  become: yes
+
+  tasks:   
+   - name: Install Git
+     apt:
+       name: git
+       state: present
+     become: yes
+
+#   - name: Clone GitHub repository
+#     git:
+#       repo: https://github.com/mihn1/uco-networks-project.git
+#       dest: /etc/ansible/git
+#       version: main
+#       force: yes
+#     become: yes
+
+   - name: Pull Docker Images 
+     command: docker-compose pull 
+     args:
+       chdir: /etc/ansible/git
+     become: yes
+
+
+   - name: Start Docker containers 
+     command: docker-compose up -d
+     args:
+       chdir: /etc/ansible/git
+     become: yes
+
+   - name: Get infos on container
+     shell: docker ps --format "{{ '{{' }} .Names {{ '}}' }}"
+     args:
+       chdir: /etc/ansible/git
+     register: docker_ps_output
+     become: yes
+   
+   - name: Display information of running Docker containers
+     debug:
+       var: docker_ps_output.stdout_lines
+     become: yes
+
+   - name: get Network Info
+     shell: docker inspect {{ item }} | grep "IPv4Address"
+     register: container_network_info 
+     loop:
+       - git_db_1
+       - cmsc5063-website
+       - git_dhcp_1
+
+   - name: Display network ID of docker containers
+     debug:
+       var: container_network_info
+     become: yes

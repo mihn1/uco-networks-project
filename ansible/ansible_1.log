@@ -1,0 +1,176 @@
+
+PLAY [Deploy Docker Compose] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.0.2.4]
+
+TASK [Install Git] *************************************************************
+ok: [10.0.2.4]
+
+TASK [Pull Docker Images] ******************************************************
+changed: [10.0.2.4]
+
+TASK [Start Docker containers] *************************************************
+changed: [10.0.2.4]
+
+TASK [Get infos on container] **************************************************
+changed: [10.0.2.4]
+
+TASK [Display information of running Docker containers] ************************
+ok: [10.0.2.4] => {
+    "docker_ps_output.stdout_lines": [
+        "git_web-db_1",
+        "git_db_1",
+        "git_apache-service_1",
+        "git_dns_1",
+        "git_dhcp_1"
+    ]
+}
+
+TASK [get Network Info] ********************************************************
+changed: [10.0.2.4] => (item=git_db_1)
+changed: [10.0.2.4] => (item=git_apache-service_1)
+changed: [10.0.2.4] => (item=git_dhcp_1)
+changed: [10.0.2.4] => (item=git_dns_1)
+
+TASK [Display network ID of docker containers] *********************************
+ok: [10.0.2.4] => {
+    "container_network_info": {
+        "changed": true,
+        "msg": "All items completed",
+        "results": [
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "cmd": "docker inspect git_db_1 | grep \"IPv4Address\"",
+                "delta": "0:00:23.156144",
+                "end": "2024-05-03 21:10:24.402075",
+                "failed": false,
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "docker inspect git_db_1 | grep \"IPv4Address\"",
+                        "_uses_shell": true,
+                        "argv": null,
+                        "chdir": null,
+                        "creates": null,
+                        "executable": null,
+                        "removes": null,
+                        "stdin": null,
+                        "stdin_add_newline": true,
+                        "strip_empty_ends": true,
+                        "warn": true
+                    }
+                },
+                "item": "git_db_1",
+                "rc": 0,
+                "start": "2024-05-03 21:10:01.245931",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "                        \"IPv4Address\": \"172.16.0.3\"",
+                "stdout_lines": [
+                    "                        \"IPv4Address\": \"172.16.0.3\""
+                ]
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "cmd": "docker inspect git_apache-service_1 | grep \"IPv4Address\"",
+                "delta": "0:00:17.929214",
+                "end": "2024-05-03 21:10:57.120394",
+                "failed": false,
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "docker inspect git_apache-service_1 | grep \"IPv4Address\"",
+                        "_uses_shell": true,
+                        "argv": null,
+                        "chdir": null,
+                        "creates": null,
+                        "executable": null,
+                        "removes": null,
+                        "stdin": null,
+                        "stdin_add_newline": true,
+                        "strip_empty_ends": true,
+                        "warn": true
+                    }
+                },
+                "item": "git_apache-service_1",
+                "rc": 0,
+                "start": "2024-05-03 21:10:39.191180",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "                        \"IPv4Address\": \"172.16.2.2\"",
+                "stdout_lines": [
+                    "                        \"IPv4Address\": \"172.16.2.2\""
+                ]
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "cmd": "docker inspect git_dhcp_1 | grep \"IPv4Address\"",
+                "delta": "0:00:19.933503",
+                "end": "2024-05-03 21:11:28.099966",
+                "failed": false,
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "docker inspect git_dhcp_1 | grep \"IPv4Address\"",
+                        "_uses_shell": true,
+                        "argv": null,
+                        "chdir": null,
+                        "creates": null,
+                        "executable": null,
+                        "removes": null,
+                        "stdin": null,
+                        "stdin_add_newline": true,
+                        "strip_empty_ends": true,
+                        "warn": true
+                    }
+                },
+                "item": "git_dhcp_1",
+                "rc": 0,
+                "start": "2024-05-03 21:11:08.166463",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "                        \"IPv4Address\": \"172.16.0.2\"",
+                "stdout_lines": [
+                    "                        \"IPv4Address\": \"172.16.0.2\""
+                ]
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "cmd": "docker inspect git_dns_1 | grep \"IPv4Address\"",
+                "delta": "0:00:07.036709",
+                "end": "2024-05-03 21:11:48.568642",
+                "failed": false,
+                "invocation": {
+                    "module_args": {
+                        "_raw_params": "docker inspect git_dns_1 | grep \"IPv4Address\"",
+                        "_uses_shell": true,
+                        "argv": null,
+                        "chdir": null,
+                        "creates": null,
+                        "executable": null,
+                        "removes": null,
+                        "stdin": null,
+                        "stdin_add_newline": true,
+                        "strip_empty_ends": true,
+                        "warn": true
+                    }
+                },
+                "item": "git_dns_1",
+                "rc": 0,
+                "start": "2024-05-03 21:11:41.531933",
+                "stderr": "",
+                "stderr_lines": [],
+                "stdout": "                        \"IPv4Address\": \"172.16.2.3\"",
+                "stdout_lines": [
+                    "                        \"IPv4Address\": \"172.16.2.3\""
+                ]
+            }
+        ]
+    }
+}
+
+PLAY RECAP *********************************************************************
+10.0.2.4                   : ok=8    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
