@@ -1,4 +1,5 @@
 services:
+  # The database server, created by Minh Nguyen
   db:
     image: postgres
     command: -c config_file=/etc/postgresql.conf # use this config file instead of the default one
@@ -6,7 +7,7 @@ services:
       - ./postgres/configs/custom_postgresql.conf:/etc/postgresql.conf
       - ./postgres/postgressData:/var/lib/postgresql/data
       - ./postgres/configs/seed.sql:/docker-entrypoint-initdb.d/seed.sql # scripts in this folder will be execute the first time this container is up and running
-    environment:
+    environment: #environment variables
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
@@ -21,8 +22,8 @@ services:
     volumes:
       - ./postgres:/code
     ports:
-      - "8000:5000"
-    environment:
+      - "8000:5000" #forwarding the port to allow the website to be used outside of docker
+    environment: #environment variables
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
@@ -33,28 +34,27 @@ services:
     depends_on:
       - db
   
-  # web server
+  # The web server, created by Dilish Upadhyaya
   apache-service:
-    # container_name: cmsc5063-website
-    image: httpd:2.4
+    image: httpd:2.4 #Apache image
     ports:
-      - "8080:80"      
+      - "8080:80" #forwarding the port to allow the website to be used outside of docker      
     volumes:
-      - ./webserver/public-html:/usr/local/apache2/htdocs/
-      - ./webserver/httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
-    restart: always
-    cpus: 0.5 
-    mem_limit: 50m
-    environment:
+      - ./webserver/public-html:/usr/local/apache2/htdocs/ #mounts the static website
+      - ./webserver/httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf #overrides the default configuration
+    restart: always #restart if the server unexpectedly shuts down
+    cpus: 0.5 #limit processing capability
+    mem_limit: 50m #limit memory capability
+    environment: #environment variables for write permissions
       - APACHE_RUN_USER=www-data 
       - APACHE_RUN_GROUP=www-data 
     networks:
       public_network:
         ipv4_address: 172.16.2.2  
   
-  # DHCP Server
+  # The DCHP server, created by Benyamin Safizadeh
   dhcp: 
-    build: ./dhcp/.
+    build: ./dhcp/. # points to a Dockerfile that configures the server
     networks:
       main_net:
         ipv4_address: 172.16.0.2
@@ -72,29 +72,30 @@ services:
     depends_on: 
       - dhcp
 
+  # The DNS server, created by Matt Carey
   dns:
     image: ubuntu/bind9:latest
     volumes:
-      - ./dns/db.172:/etc/bind/db.172
-      - ./dns/db.nexustechnologies.com:/etc/bind/db.nexustechnologies.com
-      - ./dns/named.conf.local:/etc/bind/named.conf.local
-      - ./dns/named.conf.options:/etc/bind/named.conf.options
-      - ./dns/named.conf:/etc/bind/named.conf
-      - ./dns/bind_logs:/var/log/named
+      - ./dns/db.172:/etc/bind/db.172 #reverse lookup
+      - ./dns/db.nexustechnologies.com:/etc/bind/db.nexustechnologies.com #custom website url
+      - ./dns/named.conf.local:/etc/bind/named.conf.local #add logging
+      - ./dns/named.conf.options:/etc/bind/named.conf.options #add forwarding address
+      - ./dns/named.conf:/etc/bind/named.conf #add zones
+      - ./dns/bind_logs:/var/log/named #needed for logging
     cap_add:
-      - "NET_ADMIN"
+      - "NET_ADMIN" #adds network admin capability to the image
     networks:
       public_network:
         ipv4_address: 172.16.2.3
 
-  # A dummy container for testing the dns server
+  # A dummy container for testing the dns server, needs bind and curl commands pre-installed
   dns-client:
     image: alpine:latest
     command: sh -c "apk update && apk add bind-tools && apk add c-ares && apk add curl && tail -f /dev/null"
     stdin_open: true
     tty: true
     dns:
-      - 172.16.2.3
+      - 172.16.2.3 # Our DNS server
       - 8.8.8.8 # Google's DNS - For downloading stuff
     cap_add:
       - "NET_ADMIN"
